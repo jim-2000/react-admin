@@ -1,0 +1,121 @@
+@import "slick-carousel/slick/slick.css";
+@import "slick-carousel/slick/slick-theme.css";
+@import url('https://fonts.googleapis.com/css2?family=Neucha&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;0,900;1,100&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+@layer base{
+    *{
+        scrollbar-width: 16px;
+        scrollbar-color: red;
+    }
+    *::-webkit-scrollbar {
+        width: 12px;
+        
+      }
+      
+    body{
+        @apply font-poppins;
+    }
+    h1{
+        @apply font-neocha;
+    }
+     h2, h3, h4, h5, h6 {
+        @apply font-roboto;
+    }
+}
+
+@layer components {
+  .my_drp button  {
+    @apply focus:ring-0 focus:shadow-none focus:border-none !important;
+  }
+    .captionText{
+        @apply font-roboto text-2xl text-primaryText font-semibold   hover:text-dark hover:tracking-wide transition duration-300 cursor-pointer;
+    }
+    .default_btn{
+      @apply  bg-primary border px-8 py-3 font-medium uppercase border-primary text-white rounded-md hover:bg-transparent hover:text-primary transition;
+      font-weight: 500;
+    }
+    .default_btn_transparent {
+        @apply  bg-transparent border px-8 py-3 font-medium uppercase border-primary text-primary rounded-md hover:bg-primary hover:text-white transition;
+        font-weight: 500;
+    }
+    .small{
+        @apply px-4 py-2;
+    }
+}
+
+ 
+
+.my_slick .slick-prev { 
+  left: 20px !important;
+  z-index: 999;
+  height: 1px !important;
+}   
+.my_slick .slick-next{ 
+  right: 30px !important;
+  z-index: 999;
+  height: 1px !important;
+}   
+.my_slick .slick-next:hover::before{
+  font-family: 'slick';
+  font-size: 32px;
+  line-height: 1;
+  opacity: 1.5;
+  color: #FD3D57 !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+ 
+ 
+.my_slick .slick-prev:before, .slick-next:before {
+    font-family: 'slick';
+    font-size: 30px;
+    line-height: 1;
+    opacity: 1.5;
+    background-color: transparent;
+    color: #000 !important;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+ 
+.my_slick .slick-prev:hover::before {
+  font-family: 'slick';
+  font-size: 32px;
+  line-height: 1;
+  opacity: 1.5;
+  color: #FD3D57 !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.my_slick .slick-dots li button:before {
+  font-family: 'slick';
+  font-size: 12px;
+  line-height: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  content: '';
+  text-align: center;
+  opacity: .25;
+  color: black;
+  border: 2px solid #FD3D57;
+  border-radius: 50px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+} 
+
+.my_slick .slick-dots li button:before{
+  color: #FFDADF;
+  opacity: .75;
+}
+.my_slick .slick-dots li.slick-active button:before {
+  opacity: 1;
+  color: #FD3D57;
+  background-color: #FD3D57;
+}
